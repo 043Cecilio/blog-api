@@ -71,31 +71,31 @@ A API estará disponível em `http://localhost:3000`.
 ### Auth
 | Método | Rota | Descrição | Auth |
 |---|---|---|---|
-| POST | /auth/login | Login e geração do token JWT | 🔓 |
+| POST | /auth/login | Login e geração do token JWT | Público |
 
 ### Users
 | Método | Rota | Descrição | Auth |
 |---|---|---|---|
-| POST | /users/register | Cadastro de usuário | 🔓 |
+| POST | /users/register | Cadastro de usuário | Público |
 
 ### Posts
 | Método | Rota | Descrição | Auth |
 |---|---|---|---|
-| GET | /posts | Listar posts com paginação (`?page=1&limit=10`) | 🔓 |
-| GET | /posts/:id | Buscar post por ID | 🔓 |
-| POST | /posts | Criar post | 🔒 |
-| PATCH | /posts/:id | Editar post (apenas o autor) | 🔒 |
-| DELETE | /posts/:id | Deletar post (apenas o autor) | 🔒 |
+| GET | /posts | Listar posts com paginação (`?page=1&limit=10`) | Público |
+| GET | /posts/:id | Buscar post por ID | Público |
+| POST | /posts | Criar post | Requer token |
+| PATCH | /posts/:id | Editar post (apenas o autor) | Requer token |
+| DELETE | /posts/:id | Deletar post (apenas o autor) | Requer token |
 
 ### Comments
 | Método | Rota | Descrição | Auth |
 |---|---|---|---|
-| POST | /comments | Criar comentário | 🔒 |
-| GET | /comments/post/:postId | Listar comentários de um post | 🔓 |
+| POST | /comments | Criar comentário | Requer token |
+| GET | /comments/post/:postId | Listar comentários de um post | Público |
 
 ##  Autenticação
 
-As rotas marcadas com 🔒 exigem um token JWT no header:
+As rotas que requerem token precisam do seguinte header:
 
 ```
 Authorization: Bearer SEU_TOKEN_AQUI
