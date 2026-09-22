@@ -93,7 +93,7 @@ A API estará disponível em `http://localhost:3000`.
 | POST | /comments | Criar comentário | 🔒 |
 | GET | /comments/post/:postId | Listar comentários de um post | 🔓 |
 
-## 🔐 Autenticação
+##  Autenticação
 
 As rotas marcadas com 🔒 exigem um token JWT no header:
 
