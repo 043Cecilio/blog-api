@@ -2,7 +2,7 @@
 
 API RESTful para um sistema de Blog desenvolvida com NestJS, TypeORM e PostgreSQL.
 
-## 🚀 Tecnologias
+##  Tecnologias
 
 - [NestJS](https://nestjs.com/)
 - [TypeORM](https://typeorm.io/)
@@ -13,13 +13,13 @@ API RESTful para um sistema de Blog desenvolvida com NestJS, TypeORM e PostgreSQ
 - [bcrypt](https://www.npmjs.com/package/bcrypt)
 - [class-validator](https://www.npmjs.com/package/class-validator)
 
-## 📋 Pré-requisitos
+##  Pré-requisitos
 
 - [Node.js](https://nodejs.org/) v18+
 - [Docker](https://www.docker.com/)
 - [npm](https://www.npmjs.com/)
 
-## ⚙️ Como rodar o projeto
+##  Como rodar o projeto
 
 ### 1. Clone o repositório
 
@@ -66,7 +66,7 @@ npm run start:dev
 
 A API estará disponível em `http://localhost:3000`.
 
-## 📡 Endpoints
+##  Endpoints
 
 ### Auth
 | Método | Rota | Descrição | Auth |
@@ -103,7 +103,7 @@ Authorization: Bearer SEU_TOKEN_AQUI
 
 O token é obtido através do endpoint `POST /auth/login`.
 
-## 📦 Funcionalidades
+##  Funcionalidades
 
 - Cadastro e autenticação de usuários com hash de senha (bcrypt)
 - CRUD completo de posts com geração automática de slug
